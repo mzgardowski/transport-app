@@ -1,0 +1,8 @@
+server
+build
+node_module
+jest.config.ts
+coverage
+
+# Configuration for testing
+*.test.*
