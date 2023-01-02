@@ -39,7 +39,10 @@
     "react/default-props-match-prop-types": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".tsx", ".ts", ".jsx", ".js"] }
+    ],
     "no-use-before-define": "off",
     "no-param-reassign": [
       "error",
