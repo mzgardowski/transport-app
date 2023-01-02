@@ -1,10 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
+import { AppBar, CssBaseline, Toolbar } from "@mui/material";
 
-const Header = () => {
+const Header: FC = () => {
   return (
-    <header>
-      <div>Hello</div>
-    </header>
+    <>
+      <CssBaseline />
+      <AppBar sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, padding: 1 }}>
+        <Toolbar>
+          <h3>Text</h3>
+        </Toolbar>
+      </AppBar>
+    </>
   );
 };
 

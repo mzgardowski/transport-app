@@ -1,26 +1,23 @@
 import React from "react";
 import "./App.css";
-import Logo from "./logo.svg";
+import { Box, Toolbar } from "@mui/material";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Layout/Header";
+import SideNavigation from "./components/Layout/SideNavigation";
+import Dashboard from "./pages/Home/Dashboard";
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={Logo as unknown as string} className="App-logo" alt="logo" />
-        {/* <Logo /> */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ display: "flex" }}>
+      <Header />
+      <SideNavigation />
+      <Box component="main">
+        <Toolbar />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+        </Routes>
+      </Box>
+    </Box>
   );
 };
 
