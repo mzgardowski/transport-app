@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Drawer,
-  Box,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-} from "@mui/material";
+import { Drawer, Box, List } from "@mui/material";
 import {
   People,
   Dashboard,
@@ -16,7 +9,7 @@ import {
   ManageAccounts,
   ListAlt,
 } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import LinkListItem from "../LinkListItem";
 
 const SideNavigation = () => {
   return (
@@ -43,66 +36,37 @@ const SideNavigation = () => {
           }}
         >
           <nav>
-            <ListItem sx={{ padding: 1 }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Dashboard />
-                </ListItemIcon>
-                <Link to="/">Dashboard</Link>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ padding: 1 }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Badge />
-                </ListItemIcon>
-                <Link to="/customers">Customers</Link>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ padding: 1 }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <People />
-                </ListItemIcon>
-                <Link to="/employees">Employees</Link>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ padding: 1 }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <LocalShipping />
-                </ListItemIcon>
-                <Link to="/trucks">Trucks</Link>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ padding: 1 }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ListAlt />
-                </ListItemIcon>
-                <Link to="/orders">Orders</Link>
-              </ListItemButton>
-            </ListItem>
+            <LinkListItem icon={<Dashboard />} link="/" textLink="Dashboard" />
+            <LinkListItem
+              icon={<Badge />}
+              link="/customers"
+              textLink="Customers"
+            />
+            <LinkListItem
+              icon={<People />}
+              link="/employees"
+              textLink="Employees"
+            />
+            <LinkListItem
+              icon={<LocalShipping />}
+              link="/trucks"
+              textLink="Trucks"
+            />
+            <LinkListItem icon={<ListAlt />} link="/orders" textLink="Orders" />
           </nav>
         </List>
         <List sx={{ alignSelf: "flex-end", width: "100%" }}>
           <nav>
-            <ListItem sx={{ padding: 1 }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Settings />
-                </ListItemIcon>
-                <Link to="/settings">Settings</Link>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ padding: 1 }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ManageAccounts />
-                </ListItemIcon>
-                <Link to="/account">Account</Link>
-              </ListItemButton>
-            </ListItem>
+            <LinkListItem
+              icon={<Settings />}
+              link="/settings"
+              textLink="Settings"
+            />
+            <LinkListItem
+              icon={<ManageAccounts />}
+              link="/account"
+              textLink="Account"
+            />
           </nav>
         </List>
       </Box>
