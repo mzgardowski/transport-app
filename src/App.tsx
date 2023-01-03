@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { Box, Toolbar } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Layout/Header";

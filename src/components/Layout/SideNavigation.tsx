@@ -9,7 +9,7 @@ import {
   ManageAccounts,
   ListAlt,
 } from "@mui/icons-material";
-import LinkListItem from "../LinkListItem";
+import LinkListItem from "../LinkListItem/LinkListItem";
 
 const SideNavigation = () => {
   return (
@@ -36,34 +36,42 @@ const SideNavigation = () => {
           }}
         >
           <nav>
-            <LinkListItem icon={<Dashboard />} link="/" textLink="Dashboard" />
             <LinkListItem
-              icon={<Badge />}
+              icon={<Dashboard fontSize="large" />}
+              link="/"
+              textLink="Dashboard"
+            />
+            <LinkListItem
+              icon={<Badge fontSize="large" />}
               link="/customers"
               textLink="Customers"
             />
             <LinkListItem
-              icon={<People />}
+              icon={<People fontSize="large" />}
               link="/employees"
               textLink="Employees"
             />
             <LinkListItem
-              icon={<LocalShipping />}
+              icon={<LocalShipping fontSize="large" />}
               link="/trucks"
               textLink="Trucks"
             />
-            <LinkListItem icon={<ListAlt />} link="/orders" textLink="Orders" />
+            <LinkListItem
+              icon={<ListAlt fontSize="large" />}
+              link="/orders"
+              textLink="Orders"
+            />
           </nav>
         </List>
         <List sx={{ alignSelf: "flex-end", width: "100%" }}>
           <nav>
             <LinkListItem
-              icon={<Settings />}
+              icon={<Settings fontSize="large" />}
               link="/settings"
               textLink="Settings"
             />
             <LinkListItem
-              icon={<ManageAccounts />}
+              icon={<ManageAccounts fontSize="large" />}
               link="/account"
               textLink="Account"
             />
