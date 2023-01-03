@@ -16,9 +16,17 @@ const SideNavigation = () => {
     <Drawer
       variant="permanent"
       sx={{
-        width: 250,
+        width: "20vw",
+        minWidth: "200px",
+        maxWidth: "250px",
         flexShrink: 0,
-        [`& .MuiDrawer-paper`]: { width: 250, boxSizing: "border-box" },
+        [`& .MuiDrawer-paper`]: {
+          width: "20vw",
+          minWidth: "200px",
+          maxWidth: "250px",
+          boxSizing: "border-box",
+          border: "none",
+        },
       }}
     >
       <Box

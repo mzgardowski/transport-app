@@ -5,7 +5,14 @@ const Header: FC = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, padding: 1 }}>
+      <AppBar
+        sx={{
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          padding: 1,
+          backgroundColor: "#FFF",
+          boxShadow: "none",
+        }}
+      >
         <Toolbar>
           <h3>Text</h3>
         </Toolbar>
