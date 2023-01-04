@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Layout/Header";
 import SideNavigation from "./components/Layout/SideNavigation";
 import Dashboard from "./Pages/Home/Dashboard";
@@ -10,6 +10,7 @@ import Trucks from "./Pages/Trucks/Trucks";
 import Orders from "./Pages/Orders/Orders";
 import Settings from "./Pages/Settings/Settings";
 import Account from "./Pages/Account/Account";
+import NoPage from "./Pages/NotFound/NoPage";
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/account" element={<Account />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NoPage />} />
         </Routes>
       </Box>
     </Box>
