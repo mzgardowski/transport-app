@@ -28,10 +28,10 @@ const LinkListItem: FC<LinkListItemInterface> = ({ icon, link, textLink }) => {
             color: "rgba(0, 0, 0, 0.54)",
             textDecoration: "none",
             "&:hover": {
-              color: GlobalColors.text.hover,
-              backgroundColor: GlobalColors.backgroundColor.primary,
+              color: GlobalColors.colors.white,
+              backgroundColor: GlobalColors.link.background,
               "& .MuiSvgIcon-root": {
-                color: GlobalColors.text.hover,
+                color: GlobalColors.colors.white,
               },
             },
           }}

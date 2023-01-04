@@ -1,9 +1,15 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Header from "./components/Layout/Header";
 import SideNavigation from "./components/Layout/SideNavigation";
-import Dashboard from "./pages/Home/Dashboard";
+import Dashboard from "./Pages/Home/Dashboard";
+import Customers from "./Pages/Customers/Customers";
+import Employees from "./Pages/Employees/Employees";
+import Trucks from "./Pages/Trucks/Trucks";
+import Orders from "./Pages/Orders/Orders";
+import Settings from "./Pages/Settings/Settings";
+import Account from "./Pages/Account/Account";
 
 const App = () => {
   return (
@@ -22,12 +28,13 @@ const App = () => {
       >
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/customers" element={<Dashboard />} />
-          <Route path="/employees" element={<Dashboard />} />
-          <Route path="/trucks" element={<Dashboard />} />
-          <Route path="/orders" element={<Dashboard />} />
-          <Route path="/settings" element={<Dashboard />} />
-          <Route path="/account" element={<Dashboard />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/trucks" element={<Trucks />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Box>
     </Box>

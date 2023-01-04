@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { AppBar, CssBaseline, Toolbar } from "@mui/material";
+import GlobalColors from "src/styles/GlobalColors";
 
 const Header: FC = () => {
   return (
@@ -9,7 +10,7 @@ const Header: FC = () => {
         sx={{
           zIndex: (theme) => theme.zIndex.drawer + 1,
           padding: 1,
-          backgroundColor: "#FFF",
+          backgroundColor: GlobalColors.backgroundColor.primary,
           boxShadow: "none",
         }}
       >
