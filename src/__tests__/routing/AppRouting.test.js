@@ -31,14 +31,3 @@ test("loading on bad page", () => {
 
   expect(screen.getByText(/page not found/i)).toBeInTheDocument();
 });
-
-// test("Test bad routing on page", () => {
-//   const badRoute = "/customer/111";
-//   render(
-//     <MemoryRouter initialEntries={[badRoute]}>
-//       <App />
-//     </MemoryRouter>,
-//   );
-
-//   expect(screen.getByText(/page not found/i)).toBeInTheDocument();
-// });

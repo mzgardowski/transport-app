@@ -1,5 +1,5 @@
 import React from "react";
-import { Drawer, Box, List } from "@mui/material";
+import { Drawer, Box, List, Toolbar } from "@mui/material";
 import {
   People,
   Dashboard,
@@ -9,7 +9,7 @@ import {
   ManageAccounts,
   ListAlt,
 } from "@mui/icons-material";
-import LinkListItem from "../LinkListItem/LinkListItem";
+import LinkListItem from "../components/LinkListItem";
 
 const SideNavigation = () => {
   return (
@@ -25,15 +25,14 @@ const SideNavigation = () => {
           minWidth: "200px",
           maxWidth: "250px",
           boxSizing: "border-box",
-          border: "none",
         },
       }}
     >
+      <Toolbar />
       <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          marginTop: "80px",
           width: "100%",
           height: "100%",
         }}
