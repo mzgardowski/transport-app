@@ -31,7 +31,7 @@ const HeaderUserInfo = () => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "flex-end",
         width: "250px",
       }}
     >
@@ -45,6 +45,7 @@ const HeaderUserInfo = () => {
         <IconButton
           onClick={handleClick}
           sx={{
+            padding: "6px",
             borderRadius: 8,
             border: "1px solid rgba(0,0,0, 0.10)",
             "&:hover": {
@@ -52,10 +53,16 @@ const HeaderUserInfo = () => {
             },
           }}
         >
-          <Typography px={1} variant="body1">
+          <Typography
+            px={1}
+            variant="body1"
+            sx={{
+              display: { xs: "none", sm: "block" },
+            }}
+          >
             Mateusz Zgardowski
           </Typography>
-          <Avatar>
+          <Avatar sx={{ width: 32, height: 32 }}>
             <People />
           </Avatar>
         </IconButton>
@@ -72,18 +79,18 @@ const HeaderUserInfo = () => {
               filter: "drop-shadow(0px 6px 8px rgba(0,0,0,0.32))",
               width: 250,
               mt: 1.5,
-              "&:before": {
-                content: '""',
-                display: "block",
-                position: "absolute",
-                top: 0,
-                right: 22,
-                width: 10,
-                height: 10,
-                bgcolor: "background.paper",
-                transform: "translateY(-50%) rotate(45deg)",
-                zIndex: 0,
-              },
+              //   "&:before": {
+              //     content: '""',
+              //     display: "block",
+              //     position: "absolute",
+              //     top: 0,
+              //     right: 22,
+              //     width: 10,
+              //     height: 10,
+              //     bgcolor: "background.paper",
+              //     transform: "translateY(-50%) rotate(45deg)",
+              //     zIndex: 0,
+              //   },
             },
           }}
           transformOrigin={{ horizontal: "right", vertical: "top" }}

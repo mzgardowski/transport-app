@@ -6,7 +6,7 @@ const GlobalColors = {
   },
   backgroundColor: {
     primary: "#4EA8DE",
-    secondary: "#80FFDB",
+    secondary: "#C7E4FF",
   },
   link: {
     background: "#4EA8DE",

@@ -25,7 +25,7 @@ const LinkListItem: FC<LinkListItemInterface> = ({ icon, link, textLink }) => {
         <ListItemButton
           sx={{
             borderRadius: 6,
-            color: "rgba(0, 0, 0, 0.54)",
+            color: "rgba(0, 0, 0, 0.70)",
             textDecoration: "none",
             "&:hover": {
               color: GlobalColors.colors.white,
@@ -36,8 +36,10 @@ const LinkListItem: FC<LinkListItemInterface> = ({ icon, link, textLink }) => {
             },
           }}
         >
-          {icon && <ListItemIcon>{icon}</ListItemIcon>}
-          <Typography variant="button">{textLink}</Typography>
+          {icon && <ListItemIcon sx={{ marginRight: -2 }}>{icon}</ListItemIcon>}
+          <Typography variant="button" fontWeight="bold">
+            {textLink}
+          </Typography>
         </ListItemButton>
       </Link>
     </ListItem>

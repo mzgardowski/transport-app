@@ -1,5 +1,6 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
+import { Menu } from "@mui/icons-material";
 
 const LogoContainer = () => {
   return (
@@ -8,11 +9,24 @@ const LogoContainer = () => {
         width: "20vw",
         minWidth: "200px",
         maxWidth: "250px",
-        textAlign: "center",
+        textAlign: { xs: "start", sm: "center" },
+        justifyContent: "center",
+        alignItems: "center",
         margin: 0,
+        "& p": {
+          color: "black",
+          textAlign: "center",
+        },
       }}
     >
-      <h4>Company name </h4>
+      <IconButton
+        sx={{ display: { sm: "none" }, padding: "8px", marginLeft: 1 }}
+      >
+        <Menu fontSize="large" />
+      </IconButton>
+      <Typography variant="button" sx={{ display: { xs: "none", sm: "flex" } }}>
+        Company name
+      </Typography>
     </Box>
   );
 };
