@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 const Customers = () => {
   return (
     <Box>
-      <h3>Customers</h3>
+      <h3>Your customers</h3>
     </Box>
   );
 };

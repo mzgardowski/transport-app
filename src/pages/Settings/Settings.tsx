@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 const Settings = () => {
   return (
     <Box>
-      <h3>Settings</h3>
+      <h3>Edit company settings</h3>
     </Box>
   );
 };
