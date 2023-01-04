@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import SideNavigation from "../../components/Layout/SideNavigation";
+import SideNavigation from "src/Layout/SideNavigation.tsx";
 import { BrowserRouter } from "react-router-dom";
 
 test("Render SideNavigation with links", () => {

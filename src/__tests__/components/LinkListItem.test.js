@@ -1,7 +1,7 @@
 import { People } from "@mui/icons-material";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import LinkListItem from "../../components/LinkListItem/LinkListItem";
+import LinkListItem from "src/components/LinkListItem.tsx";
 
 test("Render SideNavigation with links", () => {
   render(
