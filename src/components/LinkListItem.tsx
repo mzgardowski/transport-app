@@ -24,7 +24,7 @@ const LinkListItem: FC<LinkListItemInterface> = ({ icon, link, textLink }) => {
       >
         <ListItemButton
           sx={{
-            borderRadius: 2,
+            borderRadius: 6,
             color: "rgba(0, 0, 0, 0.54)",
             textDecoration: "none",
             "&:hover": {

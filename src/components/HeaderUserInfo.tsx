@@ -35,7 +35,6 @@ const HeaderUserInfo = () => {
         width: "250px",
       }}
     >
-      <Typography variant="body1">Mateusz Zgardowski</Typography>
       <Box
         sx={{
           display: "flex",
@@ -43,7 +42,19 @@ const HeaderUserInfo = () => {
           flexDirection: "row",
         }}
       >
-        <IconButton onClick={handleClick}>
+        <IconButton
+          onClick={handleClick}
+          sx={{
+            borderRadius: 8,
+            border: "1px solid rgba(0,0,0, 0.10)",
+            "&:hover": {
+              border: "1px solid rgba(0,0,0, 0.25)",
+            },
+          }}
+        >
+          <Typography px={1} variant="body1">
+            Mateusz Zgardowski
+          </Typography>
           <Avatar>
             <People />
           </Avatar>

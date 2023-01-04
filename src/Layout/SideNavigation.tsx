@@ -42,43 +42,35 @@ const SideNavigation = () => {
             width: "100%",
           }}
         >
-          <nav>
+          <nav style={{ marginTop: 10 }}>
+            <LinkListItem icon={<Dashboard />} link="/" textLink="Dashboard" />
             <LinkListItem
-              icon={<Dashboard fontSize="large" />}
-              link="/"
-              textLink="Dashboard"
-            />
-            <LinkListItem
-              icon={<Badge fontSize="large" />}
+              icon={<Badge />}
               link="/customers"
               textLink="Customers"
             />
             <LinkListItem
-              icon={<People fontSize="large" />}
+              icon={<People />}
               link="/employees"
               textLink="Employees"
             />
             <LinkListItem
-              icon={<LocalShipping fontSize="large" />}
+              icon={<LocalShipping />}
               link="/trucks"
               textLink="Trucks"
             />
-            <LinkListItem
-              icon={<ListAlt fontSize="large" />}
-              link="/orders"
-              textLink="Orders"
-            />
+            <LinkListItem icon={<ListAlt />} link="/orders" textLink="Orders" />
           </nav>
         </List>
         <List sx={{ alignSelf: "flex-end", width: "100%" }}>
           <nav>
             <LinkListItem
-              icon={<Settings fontSize="large" />}
+              icon={<Settings />}
               link="/settings"
               textLink="Settings"
             />
             <LinkListItem
-              icon={<ManageAccounts fontSize="large" />}
+              icon={<ManageAccounts />}
               link="/account"
               textLink="Account"
             />
