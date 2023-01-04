@@ -19,8 +19,6 @@ const App = () => {
     setMenuOpen((prev) => !prev);
   };
 
-  console.log(menuOpen);
-
   return (
     <Box sx={{ display: "flex" }}>
       <Header handleOpenMenu={handleOpenMenu} />
