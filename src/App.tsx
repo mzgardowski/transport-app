@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Toolbar } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Layout/Header";
@@ -13,10 +13,18 @@ import Account from "./Pages/Account/Account";
 import NoPage from "./Pages/NotFound/NoPage";
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const handleOpenMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  console.log(menuOpen);
+
   return (
     <Box sx={{ display: "flex" }}>
-      <Header />
-      <SideNavigation />
+      <Header handleOpenMenu={handleOpenMenu} />
+      <SideNavigation menuOpen={menuOpen} />
       <Box
         component="main"
         sx={{

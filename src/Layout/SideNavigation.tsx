@@ -12,16 +12,16 @@ import {
 import GlobalColors from "src/styles/GlobalColors";
 import LinkListItem from "../components/LinkListItem";
 
-const SideNavigation = () => {
+const SideNavigation = ({ menuOpen }: { menuOpen: boolean }) => {
   return (
     <Drawer
       variant="permanent"
       sx={{
-        width: "20vw",
-        minWidth: "200px",
-        maxWidth: "250px",
+        width: { xs: 0, sm: "20vw" },
+        minWidth: { xs: 0, sm: "200px" },
+        maxWidth: { xs: 0, sm: "250px" },
         flexShrink: 0,
-
+        display: menuOpen ? "flex" : "none",
         [`& .MuiDrawer-paper`]: {
           border: "none",
           width: "20vw",

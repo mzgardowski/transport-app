@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React from "react";
 import { AppBar } from "@mui/material";
 import GlobalColors from "src/styles/GlobalColors";
 import LogoContainer from "src/components/LogoContainer";
 import HeaderUserInfo from "src/components/HeaderUserInfo";
 
-const Header: FC = () => {
+const Header = ({ handleOpenMenu }: { handleOpenMenu: () => void }) => {
   return (
     <AppBar
       sx={{
@@ -18,7 +18,7 @@ const Header: FC = () => {
         paddingLeft: 0,
       }}
     >
-      <LogoContainer />
+      <LogoContainer handleOpenMenu={handleOpenMenu} />
       <HeaderUserInfo />
     </AppBar>
   );
