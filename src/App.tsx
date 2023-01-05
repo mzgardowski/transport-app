@@ -15,6 +15,7 @@ import useOpenMenu from "./hooks/useOpenMenu";
 
 const App = () => {
   const { menuOpen, handleOpenMenu } = useOpenMenu();
+
   return (
     <Box sx={{ display: "flex" }}>
       <Header handleOpenMenu={handleOpenMenu} />

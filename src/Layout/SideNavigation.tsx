@@ -18,15 +18,11 @@ const SideNavigation = ({ menuOpen }: { menuOpen: boolean }) => {
       variant="persistent"
       open={menuOpen}
       sx={{
-        width: { xs: 0, sm: "20vw" },
-        minWidth: { xs: 0, sm: "200px" },
-        maxWidth: { xs: 0, sm: "250px" },
+        width: { xs: 0, sm: "200px" },
         flexShrink: 0,
         [`& .MuiDrawer-paper`]: {
           border: "none",
-          width: "20vw",
-          minWidth: "200px",
-          maxWidth: "250px",
+          width: { xs: "100%", sm: "200px" },
           boxSizing: "border-box",
           backgroundColor: GlobalColors.backgroundColor.secondary,
         },

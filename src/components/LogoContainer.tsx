@@ -6,7 +6,7 @@ const LogoContainer = ({ handleOpenMenu }: { handleOpenMenu: () => void }) => {
   return (
     <Box
       sx={{
-        width: "20vw",
+        width: "200px",
         minWidth: "200px",
         maxWidth: "250px",
         textAlign: { xs: "start", sm: "center" },
