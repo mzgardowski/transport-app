@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Toolbar } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Layout/Header";
@@ -11,14 +11,10 @@ import Orders from "./Pages/Orders/Orders";
 import Settings from "./Pages/Settings/Settings";
 import Account from "./Pages/Account/Account";
 import NoPage from "./Pages/NotFound/NoPage";
+import useOpenMenu from "./hooks/useOpenMenu";
 
 const App = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const handleOpenMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
-
+  const { menuOpen, handleOpenMenu } = useOpenMenu();
   return (
     <Box sx={{ display: "flex" }}>
       <Header handleOpenMenu={handleOpenMenu} />
