@@ -15,13 +15,13 @@ import LinkListItem from "../components/LinkListItem";
 const SideNavigation = ({ menuOpen }: { menuOpen: boolean }) => {
   return (
     <Drawer
-      variant="permanent"
+      variant="persistent"
+      open={menuOpen}
       sx={{
         width: { xs: 0, sm: "20vw" },
         minWidth: { xs: 0, sm: "200px" },
         maxWidth: { xs: 0, sm: "250px" },
         flexShrink: 0,
-        display: menuOpen ? "flex" : "none",
         [`& .MuiDrawer-paper`]: {
           border: "none",
           width: "20vw",
