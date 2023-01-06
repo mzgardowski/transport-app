@@ -1,8 +1,8 @@
 import React from "react";
 import { AppBar } from "@mui/material";
 import GlobalColors from "src/styles/GlobalColors";
-import LogoContainer from "src/components/LogoContainer";
-import HeaderUserInfo from "src/components/HeaderUserInfo";
+import LogoContainer from "src/components/Header/LogoContainer";
+import HeaderUserInfo from "src/components/Header/HeaderUserInfo";
 
 const Header = ({ handleOpenMenu }: { handleOpenMenu: () => void }) => {
   return (
@@ -10,6 +10,7 @@ const Header = ({ handleOpenMenu }: { handleOpenMenu: () => void }) => {
       sx={{
         zIndex: (theme) => theme.zIndex.drawer + 1,
         padding: 1,
+        height: "67px",
         backgroundColor: GlobalColors.backgroundColor.primary,
         boxShadow: "none",
         display: "flex",

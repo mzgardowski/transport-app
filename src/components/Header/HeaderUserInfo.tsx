@@ -43,6 +43,7 @@ const HeaderUserInfo = () => {
         }}
       >
         <IconButton
+          aria-label="User Menu"
           onClick={handleClick}
           sx={{
             padding: "6px",

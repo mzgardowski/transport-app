@@ -20,6 +20,7 @@ const LogoContainer = ({ handleOpenMenu }: { handleOpenMenu: () => void }) => {
       }}
     >
       <IconButton
+        aria-label="Link Menu"
         onClick={handleOpenMenu}
         sx={{ display: { sm: "none" }, padding: "8px", marginLeft: 1 }}
       >
