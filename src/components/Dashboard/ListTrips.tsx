@@ -1,7 +1,6 @@
 import React from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
-import { Box, Typography } from "@mui/material";
-import GlobalColors from "src/styles/GlobalColors";
+import { Alert, AlertColor } from "@mui/material";
 import CustomBox from "../CustomBox/CustomBox";
 import BoxHeader from "../CustomBox/BoxHeader";
 
@@ -54,39 +53,18 @@ const columns: TableColumn<ColumnsProps>[] = [
     name: "Trip status",
     selector: (row) => row.tripStatus,
     cell: (row) => {
-      const styleAndText = {
-        text: "",
-        style: "",
-      };
-      switch (row.tripStatus) {
-        case "problem":
-          styleAndText.style = GlobalColors.status.error;
-          styleAndText.text = "Problem";
-          break;
-        case "inProgress":
-          styleAndText.style = GlobalColors.status.warning;
-          styleAndText.text = "In progress";
-          break;
-        case "done":
-          styleAndText.style = GlobalColors.status.ok;
-          styleAndText.text = "Done";
-          break;
-        default:
-          styleAndText.style = GlobalColors.status.error;
-          styleAndText.text = "Problem";
-      }
       return (
-        <Box
+        <Alert
+          severity={`${row.tripStatus}` as AlertColor}
           sx={{
-            backgroundColor: styleAndText.style,
             padding: 1,
-            borderRadius: 4,
+            ml: 1,
+            "& .MuiAlert-icon": {
+              margin: 0,
+              padding: 0,
+            },
           }}
-        >
-          <Typography variant="body2" justifySelf="center">
-            {styleAndText.text}
-          </Typography>
-        </Box>
+        />
       );
     },
   },
@@ -102,7 +80,7 @@ const data = [
     destination: "Lodz",
     client: "RTV",
     worker: "Paweł",
-    tripStatus: "done",
+    tripStatus: "error",
   },
   {
     id: 2,
@@ -113,7 +91,7 @@ const data = [
     destination: "Wroclaw",
     client: "Media",
     worker: "Kamil",
-    tripStatus: "inProgress",
+    tripStatus: "warning",
   },
   {
     id: 3,
@@ -124,7 +102,7 @@ const data = [
     destination: "Wroclaw",
     client: "Kamikadze",
     worker: "Piotr",
-    tripStatus: "problem",
+    tripStatus: "info",
   },
   {
     id: 4,
@@ -135,7 +113,7 @@ const data = [
     destination: "Wroclaw",
     client: "TransBud",
     worker: "Mateusz",
-    tripStatus: "done",
+    tripStatus: "success",
   },
   {
     id: 5,
@@ -146,13 +124,13 @@ const data = [
     destination: "Madryt",
     client: "Metaless",
     worker: "Tomek",
-    tripStatus: "done",
+    tripStatus: "warning",
   },
 ];
 
 const ListTrips = () => {
   return (
-    <CustomBox>
+    <CustomBox mx={1}>
       <BoxHeader>Last Trips</BoxHeader>
       <DataTable columns={columns} data={data} />
     </CustomBox>

@@ -5,6 +5,8 @@ import CustomBox from "../CustomBox/CustomBox";
 
 const DashboardHeader = () => (
   <CustomBox
+    mt={1}
+    mx={1}
     sx={{
       background: `linear-gradient(0deg, #FFF 50%, ${GlobalColors.backgroundColor.primary} 50%)`,
     }}

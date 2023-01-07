@@ -4,7 +4,7 @@ import BoxHeader from "../CustomBox/BoxHeader";
 
 const Messages = () => {
   return (
-    <CustomBox>
+    <CustomBox mx={1}>
       <BoxHeader>Messages</BoxHeader>
     </CustomBox>
   );
