@@ -5,7 +5,7 @@ import BoxHeader from "../CustomBox/BoxHeader";
 const Messages = () => {
   return (
     <CustomBox>
-      <BoxHeader>Routes</BoxHeader>
+      <BoxHeader>Messages</BoxHeader>
     </CustomBox>
   );
 };

@@ -7,7 +7,7 @@ interface CustomBoxProps extends BoxProps {
 
 const CustomBox = ({ children, ...restProps }: CustomBoxProps) => {
   return (
-    <Box borderRadius={3} p={2} boxShadow={2} {...restProps}>
+    <Box borderRadius={3} p={2} boxShadow={3} {...restProps}>
       {children}
     </Box>
   );

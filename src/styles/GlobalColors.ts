@@ -18,6 +18,11 @@ const GlobalColors = {
   colors: {
     white: "#FFF",
   },
+  status: {
+    error: "#FF5B5B",
+    warning: "#FF9A3C",
+    ok: "#4CD05A",
+  },
 };
 
 export default GlobalColors;
