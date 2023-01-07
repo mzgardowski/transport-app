@@ -5,10 +5,11 @@ import {
   Person,
   Route,
 } from "@mui/icons-material";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { ExpanderComponentProps } from "react-data-table-component";
 import CustomBox from "src/components/CustomBox/CustomBox";
+import ListItemWithIcon from "src/components/ListItemWithIcon";
 import { ColumnsProps } from "./generateColumns";
 
 const ExpandedComponent = ({ data }: ExpanderComponentProps<ColumnsProps>) => {
@@ -55,28 +56,36 @@ const ExpandedComponent = ({ data }: ExpanderComponentProps<ColumnsProps>) => {
           </Grid>
           <Grid container item>
             <Grid item xs={4}>
-              <CalendarMonth />
-              {date}
+              <ListItemWithIcon icon={<CalendarMonth />} text={date} />
             </Grid>
             <Grid item xs={6}>
-              <AccessTime />
-              {tripTime}
+              <ListItemWithIcon icon={<AccessTime />} text={tripTime} />
             </Grid>
           </Grid>
           <Grid container item>
             <Grid item xs={4}>
-              <Route />
-              {startingPoint} {destination}
+              <ListItemWithIcon
+                icon={<Route />}
+                text={`${startingPoint} ${destination}`}
+              />
             </Grid>
-            <Grid container item xs={6}>
-              <Person />
-              <Grid item>{worker}</Grid>
+            <Grid item xs={6}>
+              <ListItemWithIcon icon={<Person />} text={worker} />
             </Grid>
           </Grid>
-          <Grid container item>
-            <Grid item xs={4}>
-              <InfoOutlined />
-              details
+          <Grid container item justifyContent="flex-end">
+            <Grid item justifySelf="flex-end" alignSelf="center" mr={2}>
+              {/* ! TODO : create fetch function to link with details */}
+              <Button
+                sx={{
+                  border: "1px solid rgba(0,0,0, 0.10)",
+                  "&:hover": {
+                    border: "1px solid rgba(0,0,0, 0.25)",
+                  },
+                }}
+              >
+                <ListItemWithIcon icon={<InfoOutlined />} text="details" />
+              </Button>
             </Grid>
           </Grid>
         </Grid>
