@@ -1,10 +1,15 @@
 import React from "react";
 import { Avatar, Grid, Typography } from "@mui/material";
+import GlobalColors from "src/styles/GlobalColors";
 import CustomBox from "../CustomBox/CustomBox";
 
 const DashboardHeader = () => (
-  <CustomBox>
-    <Grid container>
+  <CustomBox
+    sx={{
+      background: `linear-gradient(0deg, #FFF 50%, ${GlobalColors.backgroundColor.primary} 50%)`,
+    }}
+  >
+    <Grid container alignItems="center" alignContent="center">
       <Grid item>
         <Avatar
           sx={{
@@ -15,7 +20,9 @@ const DashboardHeader = () => (
       </Grid>
       <Grid item ml={2}>
         <Typography variant="h5">Mateusz Zgardowski</Typography>
-        <Typography variant="h6">Worker</Typography>
+        <Typography variant="h6" sx={{ color: GlobalColors.text.grey }}>
+          Worker
+        </Typography>
       </Grid>
     </Grid>
   </CustomBox>

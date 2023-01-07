@@ -1,13 +1,13 @@
 import React, { ReactNode } from "react";
-import { Box } from "@mui/material";
+import { Box, BoxProps } from "@mui/material";
 
-interface CustomBoxProps {
+interface CustomBoxProps extends BoxProps {
   children: ReactNode;
 }
 
-const CustomBox = ({ children }: CustomBoxProps) => {
+const CustomBox = ({ children, ...restProps }: CustomBoxProps) => {
   return (
-    <Box m={2} p={2} boxShadow={5} borderRadius={4}>
+    <Box borderRadius={3} p={2} boxShadow={2} {...restProps}>
       {children}
     </Box>
   );

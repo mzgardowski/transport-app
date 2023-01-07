@@ -10,8 +10,8 @@ const Dashboard = () => {
   return (
     <>
       <DashboardHeader />
-      <Grid container xs={13} sm={12}>
-        <Grid container item xs={12} sm={12}>
+      <Grid container xs={13} sm={12} rowSpacing={2} mt={2}>
+        <Grid container item xs={12} sm={12} columnSpacing={2} rowSpacing={2}>
           <Grid item xs={12} sm={6}>
             <ListTrips />
           </Grid>
@@ -19,7 +19,7 @@ const Dashboard = () => {
             <LastClients />
           </Grid>
         </Grid>
-        <Grid container item xs={12} sm={12}>
+        <Grid container item xs={12} sm={12} columnSpacing={2} rowSpacing={2}>
           <Grid item xs={12} sm={5}>
             <Messages />
           </Grid>

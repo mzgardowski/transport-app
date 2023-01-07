@@ -1,8 +1,9 @@
 const GlobalColors = {
   text: {
-    primary: "#000",
+    primary: "#1976d2",
     secondary: "#7400B8",
     hover: "#008CFF",
+    grey: "#808080",
   },
   backgroundColor: {
     primary: "#4EA8DE",

@@ -22,6 +22,7 @@ const App = () => {
       <SideNavigation menuOpen={menuOpen} />
       <Box
         component="main"
+        m={2}
         sx={{
           width: "100%",
         }}
