@@ -3,7 +3,7 @@ const GlobalColors = {
     primary: "#1976d2",
     secondary: "#7400B8",
     hover: "#008CFF",
-    grey: "#808080",
+    grey: "#5F5F5F",
   },
   backgroundColor: {
     primary: "#4EA8DE",
