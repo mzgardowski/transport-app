@@ -1,12 +1,14 @@
 const GlobalColors = {
   text: {
-    primary: "#000",
+    primary: "#1976d2",
     secondary: "#7400B8",
     hover: "#008CFF",
+    grey: "#5F5F5F",
   },
   backgroundColor: {
     primary: "#4EA8DE",
     secondary: "#C7E4FF",
+    thrid: "#ECEFF1",
   },
   link: {
     background: "#4EA8DE",
@@ -15,6 +17,11 @@ const GlobalColors = {
   },
   colors: {
     white: "#FFF",
+  },
+  status: {
+    error: "#FF5B5B",
+    warning: "#FF9A3C",
+    ok: "#4CD05A",
   },
 };
 

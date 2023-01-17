@@ -3,7 +3,7 @@ import { Box, Toolbar } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Layout/Header";
 import SideNavigation from "./Layout/SideNavigation";
-import Dashboard from "./Pages/Home/Dashboard";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Customers from "./Pages/Customers/Customers";
 import Employees from "./Pages/Employees/Employees";
 import Trucks from "./Pages/Trucks/Trucks";
@@ -26,7 +26,7 @@ const App = () => {
           width: "100%",
         }}
       >
-        <Toolbar />
+        <Toolbar sx={{ height: "67px" }} />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/customers" element={<Customers />} />
