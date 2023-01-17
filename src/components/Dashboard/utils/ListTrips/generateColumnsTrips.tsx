@@ -14,14 +14,14 @@ export interface ColumnsProps {
   tripStatus: string;
 }
 
-const generateColumns = () => {
+const generateColumnsTrips = () => {
   const columns: TableColumn<ColumnsProps>[] = [
     {
       name: "Title",
       selector: (row) => row.title,
     },
     {
-      name: "Date",
+      name: "Start date",
       selector: (row) => row.date,
       cell: (row) => {
         const date = new Date(row.date);
@@ -66,4 +66,4 @@ const generateColumns = () => {
   return { columns };
 };
 
-export default generateColumns;
+export default generateColumnsTrips;

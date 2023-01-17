@@ -1,5 +1,5 @@
 import fetchLastTripsData from "./fetchLastTripsData";
-import generateColumns from "./generateColumns";
+import generateColumns from "./generateColumnsTrips";
 
 const useListTrips = () => {
   const { columns } = generateColumns();

@@ -2,8 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import DashboardHeader from "src/components/Dashboard/DasboardHeader";
 import ListTrips from "src/components/Dashboard/ListTrips";
-// import LastClients from "src/components/Dashboard/LastClients";
-import Messages from "src/components/Dashboard/Messages";
+import CostsCharts from "src/components/Dashboard/CostsCharts";
 import TracksAndWorkers from "src/components/Dashboard/TrucksAndWorkers";
 
 const Dashboard = () => {
@@ -11,7 +10,7 @@ const Dashboard = () => {
     <>
       <DashboardHeader />
       <Grid container rowSpacing={2} mt={2}>
-        <Grid container xs={12} item>
+        <Grid container xs={12} md={12} item>
           <Grid item xs={12}>
             <ListTrips />
           </Grid>
@@ -21,7 +20,7 @@ const Dashboard = () => {
             <TracksAndWorkers />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Messages />
+            <CostsCharts />
           </Grid>
         </Grid>
       </Grid>

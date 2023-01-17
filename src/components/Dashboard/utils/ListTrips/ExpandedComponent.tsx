@@ -10,7 +10,7 @@ import React from "react";
 import { ExpanderComponentProps } from "react-data-table-component";
 import CustomBox from "src/components/CustomBox/CustomBox";
 import ListItemWithIcon from "src/components/ListItemWithIcon";
-import { ColumnsProps } from "./generateColumns";
+import { ColumnsProps } from "./generateColumnsTrips";
 
 const ExpandedComponent = ({ data }: ExpanderComponentProps<ColumnsProps>) => {
   const {
@@ -22,19 +22,7 @@ const ExpandedComponent = ({ data }: ExpanderComponentProps<ColumnsProps>) => {
     destination,
     client,
     worker,
-    tripStatus,
   } = data;
-  console.log(
-    id,
-    title,
-    date,
-    tripTime,
-    startingPoint,
-    destination,
-    client,
-    worker,
-    tripStatus,
-  );
   return (
     <CustomBox height="200px" sx={{ borderRadius: 0 }}>
       <Grid container flexDirection="row" flex={1}>
@@ -77,6 +65,7 @@ const ExpandedComponent = ({ data }: ExpanderComponentProps<ColumnsProps>) => {
             <Grid item justifySelf="flex-end" alignSelf="center" mr={2}>
               {/* ! TODO : create fetch function to link with details */}
               <Button
+                onClick={() => console.log(id)}
                 sx={{
                   border: "1px solid rgba(0,0,0, 0.10)",
                   "&:hover": {
