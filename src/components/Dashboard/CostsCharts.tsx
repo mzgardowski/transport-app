@@ -1,7 +1,7 @@
 import React from "react";
 import { RadialBarChart, RadialBar } from "recharts";
 import { Box, Grid, Typography } from "@mui/material";
-import CustomBox from "../CustomBox/CustomBox";
+import AnimatedCustomBox from "src/components/AnimatedCustomBox/AnimatedCustomBox";
 import BoxHeader from "../CustomBox/BoxHeader";
 
 const data = [
@@ -27,7 +27,7 @@ const data = [
 
 const CostsCharts = () => {
   return (
-    <CustomBox mx={1}>
+    <AnimatedCustomBox mx={1}>
       <BoxHeader>Billing this month : February 2023</BoxHeader>
       <Grid container>
         <Grid container item justifyContent="center">
@@ -35,16 +35,16 @@ const CostsCharts = () => {
             width={300}
             height={200}
             cx={150}
-            cy={150}
+            cy={170}
             innerRadius={40}
-            outerRadius={140}
-            barSize={25}
+            outerRadius={150}
+            barSize={30}
             startAngle={180}
             endAngle={0}
             data={data}
           >
             <RadialBar
-              label={{ position: "insideStart", fill: "#fff" }}
+              label={{ position: "insideStart", fill: "#FFF" }}
               background
               dataKey="value"
             />
@@ -69,7 +69,7 @@ const CostsCharts = () => {
           </Box>
         </Grid>
       </Grid>
-    </CustomBox>
+    </AnimatedCustomBox>
   );
 };
 

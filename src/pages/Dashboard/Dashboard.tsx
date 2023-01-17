@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <>
       <DashboardHeader />
-      <Grid container rowSpacing={2} mt={2}>
+      <Grid container rowSpacing={2} mt={2} mb={2}>
         <Grid container xs={12} md={12} item>
           <Grid item xs={12}>
             <ListTrips />

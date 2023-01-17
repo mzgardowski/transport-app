@@ -1,10 +1,10 @@
 import React from "react";
 import { Avatar, Grid, Typography } from "@mui/material";
 import GlobalColors from "src/styles/GlobalColors";
-import CustomBox from "../CustomBox/CustomBox";
+import AnimatedCustomBox from "src/components/AnimatedCustomBox/AnimatedCustomBox";
 
 const DashboardHeader = () => (
-  <CustomBox
+  <AnimatedCustomBox
     mt={1}
     mx={1}
     sx={{
@@ -27,7 +27,7 @@ const DashboardHeader = () => (
         </Typography>
       </Grid>
     </Grid>
-  </CustomBox>
+  </AnimatedCustomBox>
 );
 
 export default DashboardHeader;

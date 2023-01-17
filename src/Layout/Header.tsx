@@ -12,7 +12,6 @@ const Header = ({ handleOpenMenu }: { handleOpenMenu: () => void }) => {
         padding: 1,
         height: "67px",
         backgroundColor: GlobalColors.backgroundColor.primary,
-        boxShadow: "none",
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
